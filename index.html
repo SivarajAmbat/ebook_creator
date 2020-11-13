@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> </head>
+
+<body>
+	<div class="container">
+		<div class="form-horizontal">
+			<h2>Main Page</h2>
+			<hr>
+			<p>Please enter desired values in the text boxes and click the Go button</p>
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-12 col-md-12 col-lg-12">p1: </label>
+				<input id="p1" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" type="text"> </div>
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-12 col-md-12 col-lg-12">p2: </label>
+				<input id="p2" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" type="text"> </div>
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-12 col-md-12 col-lg-12">p3: </label>
+				<input id="p3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" type="text"> </div>
+			<div class="form-group">
+				<label class="col-xs-12 col-sm-12 col-md-12 col-lg-12">p4: </label>
+				<input id="p4" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" type="text"> </div>
+			<button id="btn" class="btn btn-primary">Go</button>
+		</div>
+	</div>
+	<script>
+	$(document).ready(function() {
+		$('#btn').click(function() {
+			var p1text = $('#p1').val();
+			var p2text = $('#p2').val();
+			var p3text = $('#p3').val();
+			var p4text = $('#p4').val();
+			var url = "/other.html?p1=" + p1text + "&p2=" + p2text + "&p3=" + p3text + "&p4=" + p4text;
+			window.open(url, '_blank');
+		})
+	})
+	</script>
+</body>
+
+</html>
